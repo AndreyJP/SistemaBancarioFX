@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #dfe4ea;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poo.sistemabancario.viewscontroller.ControladorTelaCadastroCliente">
+    <children>
+        <Text layoutX="422.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo cliente">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+        <TextField fx:id="nomeCliente" layoutX="261.0" layoutY="167.0" prefHeight="26.0" prefWidth="477.0" promptText="Nome completo do cliente" />
+        <Label layoutX="261.0" layoutY="144.0" text="Nome: *">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="cpfCliente" layoutX="261.0" layoutY="236.0" prefHeight="26.0" prefWidth="478.0" promptText="CPF no formato XXX.XXX.XXX-XX" />
+        <Label layoutX="261.0" layoutY="214.0" text="CPF: *">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="profissaoCliente" layoutX="262.0" layoutY="361.0" prefHeight="26.0" prefWidth="478.0" promptText="Profissão do cliente" />
+        <Label layoutX="263.0" layoutY="341.0" text="Profissão:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="enderecoCliente" layoutX="262.0" layoutY="425.0" prefHeight="26.0" prefWidth="478.0" promptText="Endereço completo do cliente" />
+        <Label layoutX="262.0" layoutY="405.0" text="Endereço:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="408.0" layoutY="493.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #27ae60;" text="Cadastrar" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+      <Button layoutX="513.0" layoutY="493.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #a5b1c2;" text="Cancelar" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="usuarioCliente" layoutX="263.0" layoutY="297.0" prefHeight="26.0" prefWidth="230.0" promptText="Usuário de acesso" />
+      <Label layoutX="263.0" layoutY="277.0" text="Usuário: *">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="277.0" text="Senha: *">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="senhaUsuario" layoutX="508.0" layoutY="297.0" prefHeight="26.0" prefWidth="230.0" promptText="Senha de acesso" />
+      <Pane prefHeight="600.0" prefWidth="188.0" style="-fx-background-color: #95afc0;">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="172.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../assets/logo-principal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
