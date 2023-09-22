@@ -15,8 +15,8 @@ public class Banco {
     private ArrayList<Cliente> clientes;
 
     //Controladores de Arquivo
-    private final ControladorArquivoUsuarios controladorArquivoUsuario = new ControladorArquivoUsuarios();
-    private final ControladorArquivoClientes controladorArquivoClientes = new ControladorArquivoClientes();
+    private ControladorArquivoUsuarios controladorArquivoUsuario = new ControladorArquivoUsuarios();
+    private ControladorArquivoClientes controladorArquivoClientes = new ControladorArquivoClientes();
 
     public Banco(String nome) {
         this.nome = nome;

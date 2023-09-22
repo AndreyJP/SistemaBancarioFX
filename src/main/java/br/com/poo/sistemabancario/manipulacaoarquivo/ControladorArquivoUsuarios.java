@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ControladorArquivoUsuarios {
 
-    private final String arquivoUsuarios = "arquivoUsuarios.ser";
+    private final String ARQUIVO_USUARIOS = "arquivoUsuarios.ser";
 
     public void cadastrarUsuarioNoArquivo(Usuario usuario){
         ArrayList<Usuario> usuarios = this.lerArquivoUsuarios();
@@ -17,7 +17,7 @@ public class ControladorArquivoUsuarios {
 
     public ArrayList<Usuario> lerArquivoUsuarios(){
         ArrayList<Usuario> usuarios = new ArrayList<>();
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(arquivoUsuarios))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARQUIVO_USUARIOS))) {
             usuarios = (ArrayList<Usuario>) ois.readObject();
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado. Criando um novo arquivo.");
@@ -29,7 +29,7 @@ public class ControladorArquivoUsuarios {
     }
 
     private void salvarArquivoUsuarios(ArrayList<Usuario> usuarios) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(arquivoUsuarios))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ARQUIVO_USUARIOS))) {
             oos.writeObject(usuarios);
         } catch (IOException e) {
             e.printStackTrace();
