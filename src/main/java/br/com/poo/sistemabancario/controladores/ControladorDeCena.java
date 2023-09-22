@@ -1,4 +1,4 @@
-package br.com.poo.sistemabancario.controller;
+package br.com.poo.sistemabancario.controladores;
 
 import br.com.poo.sistemabancario.main.SistemaBancario;
 import javafx.fxml.FXMLLoader;

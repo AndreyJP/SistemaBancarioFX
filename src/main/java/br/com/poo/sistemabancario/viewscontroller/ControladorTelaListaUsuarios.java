@@ -1,6 +1,6 @@
 package br.com.poo.sistemabancario.viewscontroller;
 
-import br.com.poo.sistemabancario.controller.ControladorDeCena;
+import br.com.poo.sistemabancario.controladores.ControladorDeCena;
 import br.com.poo.sistemabancario.main.SistemaBancario;
 import br.com.poo.sistemabancario.usuarios.Usuario;
 import javafx.collections.FXCollections;
