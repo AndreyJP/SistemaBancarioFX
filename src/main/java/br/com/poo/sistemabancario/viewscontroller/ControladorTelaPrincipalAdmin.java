@@ -35,8 +35,8 @@ public class ControladorTelaPrincipalAdmin {
     }
 
     @FXML
-    protected void gerirContas(){
-        System.out.println("Gerir Contas");
+    protected void gerirContas() throws IOException {
+       ControladorDeCena.trocarCena(ControladorTelaListaContas.FXML_PATH);
     }
 
     @FXML

@@ -1,6 +1,8 @@
 package br.com.poo.sistemabancario.usuarios;
 
-public class Funcionario extends Usuario{
+import java.io.Serializable;
+
+public class Funcionario extends Usuario implements Serializable {
     private int matricula;
     private String cargo;
     private double salario;

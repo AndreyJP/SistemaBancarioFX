@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.function.Consumer;
 
 public class ControladorTelaCadastroCliente {
 
@@ -34,12 +33,6 @@ public class ControladorTelaCadastroCliente {
     @FXML
     TextField enderecoCliente;
 
-    private Consumer<Cliente> cadastroConcluidoCallback;
-
-    public void setCadastroConcluidoCallback(Consumer<Cliente> cadastroConcluidoCallback) {
-        this.cadastroConcluidoCallback = cadastroConcluidoCallback;
-    }
-
     @FXML
     protected void cadastrar() throws IOException {
 
@@ -53,10 +46,6 @@ public class ControladorTelaCadastroCliente {
             }
 
             SistemaBancario.getBank().cadastrarCliente(cliente);
-
-            if(cadastroConcluidoCallback != null){
-                cadastroConcluidoCallback.accept(cliente);
-            }
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Sucesso");
@@ -79,12 +68,6 @@ public class ControladorTelaCadastroCliente {
     protected void cancelar() throws IOException {
         this.limparInputs();
         ControladorDeCena.trocarCena(ControladorTelaListaClientes.FXML_PATH);
-    }
-
-    protected void fecharModal(){
-        this.limparInputs();
-        Stage stage = (Stage) nomeCliente.getScene().getWindow();
-        stage.close();
     }
 
     protected void limparInputs(){

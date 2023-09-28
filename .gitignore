@@ -38,6 +38,4 @@ build/
 .DS_Store
 
 ### Arquivos ###
-arquivoClientes.ser
-arquivoIdentificadores.ser
-arquivoUsuarios.ser
+*.ser

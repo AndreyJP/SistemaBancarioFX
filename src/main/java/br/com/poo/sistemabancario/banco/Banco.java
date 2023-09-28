@@ -1,6 +1,7 @@
 package br.com.poo.sistemabancario.banco;
 
 import br.com.poo.sistemabancario.manipulacaoarquivo.ControladorArquivoClientes;
+import br.com.poo.sistemabancario.manipulacaoarquivo.ControladorArquivoContas;
 import br.com.poo.sistemabancario.manipulacaoarquivo.ControladorArquivoUsuarios;
 import br.com.poo.sistemabancario.usuarios.Administrador;
 import br.com.poo.sistemabancario.usuarios.Cliente;
@@ -8,7 +9,7 @@ import br.com.poo.sistemabancario.usuarios.Usuario;
 
 import java.util.ArrayList;
 
-public class Banco {
+public class Banco{
     private String nome;
     private ArrayList<Usuario> usuarios;
     private ArrayList<Conta> contas;
@@ -17,12 +18,13 @@ public class Banco {
     //Controladores de Arquivo
     private ControladorArquivoUsuarios controladorArquivoUsuario = new ControladorArquivoUsuarios();
     private ControladorArquivoClientes controladorArquivoClientes = new ControladorArquivoClientes();
+    private ControladorArquivoContas controladorArquivoContas = new ControladorArquivoContas();
 
     public Banco(String nome) {
         this.nome = nome;
         this.usuarios = controladorArquivoUsuario.lerArquivoUsuarios();
         this.clientes = controladorArquivoClientes.lerArquivoClientes();
-        this.contas = new ArrayList<>();
+        this.contas = controladorArquivoContas.lerArquivoContas();
         this.criarUsuarioAdminPadrao();
     }
 
@@ -56,6 +58,11 @@ public class Banco {
         controladorArquivoUsuario.cadastrarUsuarioNoArquivo(cliente);
     }
 
+    public void cadastrarConta(Conta conta){
+        this.getContas().add(conta);
+        controladorArquivoContas.cadastrarContaNoArquivo(conta);
+    }
+
     public boolean usuarioExiste(String usuario){
         boolean jaExiste = false;
         this.usuarios = controladorArquivoUsuario.lerArquivoUsuarios();
@@ -78,6 +85,12 @@ public class Banco {
     }
 
     public ArrayList<Cliente> getClientes() {
+        this.clientes = controladorArquivoClientes.lerArquivoClientes();
         return this.clientes;
+    }
+
+    public ArrayList<Conta> getContas() {
+        this.contas = controladorArquivoContas.lerArquivoContas();
+        return this.contas;
     }
 }

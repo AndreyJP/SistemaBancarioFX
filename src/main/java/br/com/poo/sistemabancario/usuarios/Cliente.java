@@ -31,4 +31,5 @@ public class Cliente extends Usuario implements Serializable {
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
+
 }

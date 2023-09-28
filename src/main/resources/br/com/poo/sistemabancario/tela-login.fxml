@@ -44,7 +44,7 @@
                 <Font size="13.0" />
             </font>
         </Text>
-      <Pane layoutY="-1.0" prefHeight="600.0" prefWidth="278.0" style="-fx-background-color: #95afc0;">
+      <Pane layoutY="-1.0" prefHeight="600.0" prefWidth="278.0" style="-fx-background-color: #95afc0; -fx-background-radius: 0 40 40 0;">
          <children>
               <ImageView fitHeight="91.0" fitWidth="285.0" layoutX="-3.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                   <image>
