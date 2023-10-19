@@ -64,5 +64,10 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="743.0" layoutY="16.0" onMouseClicked="#consultarGraficos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/bar-chart.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

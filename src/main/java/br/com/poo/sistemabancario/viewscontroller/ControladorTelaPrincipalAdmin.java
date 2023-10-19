@@ -7,6 +7,8 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
+import static br.com.poo.sistemabancario.viewscontroller.ControladorTelaGraficos.FXML_PATH;
+
 public class ControladorTelaPrincipalAdmin {
 
     public static final String FXML_PATH = "tela-principal-admin.fxml";
@@ -37,6 +39,11 @@ public class ControladorTelaPrincipalAdmin {
     @FXML
     protected void gerirContas() throws IOException {
        ControladorDeCena.trocarCena(ControladorTelaListaContas.FXML_PATH);
+    }
+
+    @FXML
+    protected void consultarGraficos() throws IOException {
+        ControladorDeCena.trocarCena(ControladorTelaGraficos.FXML_PATH);
     }
 
     @FXML
