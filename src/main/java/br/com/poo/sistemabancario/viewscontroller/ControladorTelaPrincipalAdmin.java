@@ -47,6 +47,11 @@ public class ControladorTelaPrincipalAdmin {
     }
 
     @FXML
+    protected void consultarVideos() throws IOException {
+        ControladorDeCena.trocarCena(ControladorTelaVideos.FXML_PATH);
+    }
+
+    @FXML
     protected void sair() throws IOException {
         SistemaBancario.setUsuarioLogado(null);
         ControladorDeCena.trocarCena(ControladorTelaLogin.FXML_PATH);

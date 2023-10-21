@@ -64,9 +64,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="743.0" layoutY="16.0" onMouseClicked="#consultarGraficos" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="753.0" layoutY="20.0" onMouseClicked="#consultarGraficos" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/bar-chart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="44.0" layoutX="695.0" layoutY="18.0" onMouseClicked="#consultarVideos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/videos.png" />
          </image>
       </ImageView>
     </children>

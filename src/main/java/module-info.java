@@ -1,6 +1,7 @@
 module br.com.poo.sistemabancario {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.media;
 
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
