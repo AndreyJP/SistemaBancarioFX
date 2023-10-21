@@ -1,0 +1,27 @@
+/*Colunas Pie Char*/
+
+.default-color0.chart-pie{
+    -fx-pie-color: #60a3bc
+}
+
+.default-color1.chart-pie{
+    -fx-pie-color: #3c6382
+}
+
+.default-color2.chart-pie{
+    -fx-pie-color: #0a3d62
+}
+
+/*Colunas Bar Chart*/
+
+.default-color0.chart-bar{
+    -fx-bar-fill: #95afc0
+}
+
+.default-color1.chart-bar{
+    -fx-bar-fill: #3c6382
+}
+
+.default-color2.chart-bar{
+    -fx-bar-fill: #0a3d62
+}
